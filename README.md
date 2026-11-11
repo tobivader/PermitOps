@@ -1,5 +1,7 @@
 # PermitOps — Toronto permit operations analytics
 
+Public repository: [tobivader/PermitOps](https://github.com/tobivader/PermitOps).
+
 An analyst portfolio MVP using real City of Toronto permit records to identify categories for operational investigation. Python cleans and audits the data, PostgreSQL computes reusable metrics, and CSV datasets plus DAX measures support a three-page Power BI report.
 
 ```mermaid
@@ -67,7 +69,7 @@ PERMITOPS_TEST_DSN='host=127.0.0.1 port=55432 dbname=permitops_test' .venv/bin/p
 - `docs/figures/`: reproducible PNG/SVG analysis charts and input provenance. Regenerate with `.venv/bin/python -m src.charts` after a validated pipeline run.
 - `dist/PermitOps_PowerBI_Handoff.zip`: local Windows-transfer bundle containing actual reporting CSVs, typed Power Query templates, DAX, model instructions and definitions. Generate it with `.venv/bin/python -m src.package_handoff`; its integrity/hash evidence is in `outputs/handoff_package.json`. The archive stays outside Git because it includes the large record-level reporting dataset.
 
-Power BI Desktop is unavailable in this macOS environment. No PBIX, dashboard screenshots, Power BI validation or public GitHub publication is claimed. The report import/model/measures are a handoff for a Windows Power BI session.
+Power BI Desktop is unavailable in this macOS environment. No PBIX, dashboard screenshots or Power BI validation is claimed. The report import/model/measures are a handoff for a Windows Power BI session. Source, SQL, aggregate results, documentation and charts are published in GitHub; raw/local files and the record-level handoff ZIP remain excluded.
 
 ## Scope and cautions
 

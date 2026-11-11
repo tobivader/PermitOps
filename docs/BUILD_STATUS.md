@@ -36,7 +36,7 @@ Three static analysis charts were generated from fingerprint-verified SQL export
 ## Remaining portfolio work and limits
 
 - Build/import and verify an actual Power BI report in Windows: relationships, DAX filter behavior, slicers, drill-through, visuals and screenshots remain untested. No PBIX was produced.
-- Git is initialized locally, with raw/cleaned CSVs, database, virtual environment and local handoff ZIP ignored. The source/aggregate/chart snapshot is prepared for a local commit. Public GitHub publication remains incomplete: GitHub CLI is absent, the GitHub plugin is unconnected, and no browser is available. See docs/PUBLICATION_CHECKLIST.md.
+- Source, SQL, tests, aggregate outputs, documentation and charts are published at https://github.com/tobivader/PermitOps on main. Initial source commit: 8cae142. GitHub's unauthenticated repository API confirmed public visibility and main as the default branch. Raw/cleaned CSVs, database, virtual environment, record-level reporting CSV and local ZIP remain excluded. See docs/PUBLICATION_CHECKLIST.md.
 - Source-owner confirmation of conflicting identities and administrative-category exclusions is outstanding. Quarantine concentration, especially Conditional/Partial permits, limits comparisons. This does not block reproducing the defined MVP but does limit production interpretation.
 - No geographic joins, business-day calendar, causal attribution, SLA assessment, historical backlog reconstruction or measured operational improvement is claimed.
 - The isolated PostgreSQL server remains running on localhost:55432 for further exploration. Stop it with the README command when finished.

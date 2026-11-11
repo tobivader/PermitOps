@@ -2,7 +2,7 @@
 
 > **Purpose:** A living companion to [`PermitOps_Project_Plan.md`](./PermitOps_Project_Plan.md). Use the **plan** to decide what to build; use **this journal** to explain what you did, why you did it, what went wrong, how you fixed it, and what you learned. Update it throughout the project—not only at the end.
 >
-> **Project status:** Working Python/PostgreSQL MVP implemented; see actual build entries at the end and outputs/validation.json for evidence. The original planning templates below remain illustrative. Power BI execution/publication remain unfinished.
+> **Project status:** Working Python/PostgreSQL MVP implemented; see actual build entries at the end and outputs/validation.json for evidence. The original planning templates below remain illustrative. Power BI execution remains unfinished; GitHub publication is now complete (see latest entry).
 
 ## Quick navigation
 
@@ -469,3 +469,7 @@ Created a separate permitops_test database. Five cleaning tests plus a PostgreSQ
 
 ### Publication state
 GitHub discovery found an available but uninstalled/unconnected GitHub plugin; a connection was suggested. GitHub CLI is absent and the browser tool reported No browser is available. Publication therefore remains external work. Local source/aggregate/chart staging was reviewed; raw files, database and local handoff ZIP remain excluded.
+
+
+## GitHub publication — 2026-11-11
+The user supplied https://github.com/tobivader/PermitOps.git. git ls-remote returned no refs, confirming the destination was empty. Added origin and pushed main successfully. Existing Git authentication worked without inspecting credentials or needing a plugin/browser. Initial source commit: 8cae14230b54644dc6195c69bd8363ad0af44696. GitHub public API readback returned private=false and default_branch=main. Earlier connection-blocker entries are historical and superseded. README and publication/build status now reflect the repository. Actual Power BI runtime verification remains unfinished under the environment-limited handoff scope.

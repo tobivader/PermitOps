@@ -1,17 +1,18 @@
-# Publication handoff
+# Publication verification
 
-The local project is ready for repository review. Public GitHub publication has not happened. GitHub CLI is absent, the GitHub plugin is unconnected, and the computer-use environment reported no available browser. No credentials were inspected and no remote was invented.
+Published repository: https://github.com/tobivader/PermitOps . The user supplied this destination. The empty remote was checked before the first push, and local main was pushed successfully. GitHub's unauthenticated repository API confirmed private=false and default_branch=main. Initial source commit: 8cae14230b54644dc6195c69bd8363ad0af44696.
 
-## Before publishing
+Git push worked with the existing Git authentication environment. No GitHub CLI, plugin or browser connection was needed, and no credentials were inspected. Earlier journal entries describing a missing publication connection are historical; this successful publication supersedes that blocker.
 
-- Review README, findings, definitions and BUILD_STATUS for accurate claims.
-- Keep raw/cleaned records, PostgreSQL, virtual environment and the local Power BI ZIP outside Git. `.gitignore` covers these paths.
-- Retain the City attribution and licence link; no City endorsement is implied.
-- Keep actual Power BI/DAX execution and screenshot status explicit. The analysis figures are not Power BI screenshots.
-- `git status --short` should show no accidental record-level data. Git attributes preserve CSV bytes so the saved export fingerprints remain meaningful after checkout.
+## Repository contents
 
-## Remaining external step
+- Python pipeline, SQL schema/views, cleaning and PostgreSQL regression tests.
+- README, business/KPI/data-quality documentation, learning guide and findings.
+- Aggregated reporting CSVs, validation/reproducibility evidence and analysis PNG/SVG charts.
+- Power BI instructions, DAX and typed Power Query templates, explicitly marked untested in Power BI.
 
-Install/connect the GitHub plugin to continue publication through the account you choose. The candidate repository name is PermitOps; visibility and the final repository URL must come from a completed GitHub action, not a guessed link. Alternatively, use your own authenticated Git client to create a repository and push this local repository.
+Raw/cleaned records, PostgreSQL files, virtual environment, record-level reporting CSV and Windows handoff ZIP are ignored and were checked absent from the tracked snapshot. Generated CSV hashes match committed blobs. City attribution and the Toronto licence link are retained; no City endorsement is implied.
 
-After publication, verify the remote default branch contains the source, SQL, tests, README, aggregate exports and figures. Check that README images render, links resolve and the excluded large/local files are absent. Only then add the observed public URL to the project status and portfolio.
+## Follow-up
+
+Actual Power BI Desktop execution, visuals, drill-through, slicers and screenshots remain future work on Windows. Static analysis figures are not dashboard screenshots. Verify Power BI values against SQL reference outputs before describing that report as complete. Source-owner review of conflicting keys and administrative exclusions remains an analytical limitation.
