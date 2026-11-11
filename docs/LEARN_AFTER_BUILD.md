@@ -42,6 +42,16 @@ Tests use deliberately synthetic small fixtures to exercise edge cases. Findings
 
 ## How to study this project
 
+## The Mac-friendly manager dashboard
+
+`sql/06_dashboard.sql` produces exact frequency distributions and the New Houses revision/quarter views. `src/build_dashboard.py` sends anonymous aggregate frequencies to the browser. The report never sends permit IDs, addresses or descriptions. Its default issue window is November 2025–October 2026; the pooled metrics here are 35,876 issues, median 28 days and P90 141 days. These differ from the longer full-study numbers because the denominator is different.
+
+`web-dashboard/engine.js` merges frequencies under the chosen date/category filters. If nine records took zero days and one took 100 days, the median is zero, not 50. P90 uses continuous rank interpolation over all ten records. Averaging two group medians would give the wrong result. Browser tests compare these calculations to independent PostgreSQL queries, including a month with applications but no issued cases. The application also validates empty/custom ranges and explicitly disables historical date controls for the current workload snapshot.
+
+The New Houses investigation demonstrates why one category median is insufficient. Original permits comprise 53.0% of recent issues but 86.8% of reviews over a year. Their median remained 71 days while P90 increased from 428.8 to 876 days. Q1 2026 accounts for 119 of the recent cohort's 151 over-year reviews. These are leads for a case audit, not proof of a staffing or process cause. See `docs/NEW_HOUSES_DEEP_DIVE.md` for full denominators and partial-quarter cautions.
+
+The screenshots in `dashboard/screenshots` are genuine captures of the published web application. The optional video uses these captures with computer-generated narration and is explicitly labeled as screenshot-based. A recording made from still captures is not evidence that the project owner has personally delivered or can defend a live presentation. Practice using `docs/WALKTHROUGH_3_MINUTES.md` and then explain the same findings in your own words.
+
 `src/charts.py` plots the validated SQL exports with matplotlib and checks their saved hashes first. It sums counts across categories, but never averages their medians. The category comparison has separate scales for median and P90, and the workload chart separates issued active permits from the unissued population. The chart provenance file records exactly which SQL export hashes were used. These PNG/SVG files are analyst charts, not screenshots of a Power BI report.
 
 Read the business brief, then KPI definitions, the QA JSON, clean.py, the SQL files and validation.py. Run a single category query and explain its denominator before opening Power BI. Read the findings last and ask whether each recommendation follows from an observed metric rather than an assumed cause.

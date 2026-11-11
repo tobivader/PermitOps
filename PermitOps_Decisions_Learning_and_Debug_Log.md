@@ -473,3 +473,28 @@ GitHub discovery found an available but uninstalled/unconnected GitHub plugin; a
 
 ## GitHub publication — 2026-11-11
 The user supplied https://github.com/tobivader/PermitOps.git. git ls-remote returned no refs, confirming the destination was empty. Added origin and pushed main successfully. Existing Git authentication worked without inspecting credentials or needing a plugin/browser. Initial source commit: 8cae14230b54644dc6195c69bd8363ad0af44696. GitHub public API readback returned private=false and default_branch=main. Earlier connection-blocker entries are historical and superseded. README and publication/build status now reflect the repository. Actual Power BI runtime verification remains unfinished under the environment-limited handoff scope.
+
+
+## Manager-facing portfolio upgrade — 2026-11-11
+
+### DEC-010 — Mac-friendly browser dashboard
+The user requested the three-page manager dashboard, actual screenshots, a business-first README, executive summary, New Houses investigation and walkthrough. Built a dependency-free production HTML/CSS/JavaScript/SVG report with exact frequency-weighted percentiles. Python generates only anonymous SQL aggregates. Sixteen calculation/interface tests passed; the full pipeline also passed 41 original metrics checks and 15 new SQL/pandas group checks. All three live pages were visually inspected and captured in Chrome after user approval. Real mobile behavior and Power BI remain untested.
+
+### ERR-007 — Nullable category parameter had indeterminate SQL type
+Dashboard generation failed with psycopg.errors.IndeterminateDatatype: could not determine data type of parameter $3. The all-category filter passed None to an isolated IS NULL placeholder, which PostgreSQL could not type from another parameter. Fixed with %s::text IS NULL. Verification: six independent SQL reference cohorts generated, 15 deep-dive checks passed and all browser calculation comparisons matched.
+
+### ERR-008 — Local preview and browser access restrictions
+The sandbox blocked HTTP server binding and localhost readiness requests. Authorized retries served the actual page successfully. Chrome initially returned Computer Use was not approved to use Google Chrome; the user explicitly allowed it. Later user/window changes invalidated accessibility controls, so actions were refreshed against current state and Chrome was left idle for QA. Genuine screenshots and Mechanical category/reset checks succeeded. No screenshots were fabricated. The native Screenshot app did not expose a usable recording interface (timeout), so the reproducible tour uses real captures rather than claiming a continuous screen recording.
+
+### ERR-009 — Expired Sites source credential
+The initial source helper rejected an expired credential. Renewed access for the same persisted project, kept credentials only in session memory and passed them through hidden stdin. The hosting checkout is isolated under .local/permitops-site so nested Git metadata cannot replace the GitHub project source. Packaging/push succeeded, then version 1 deployed. The user explicitly requested public manager access, which was applied and read back before public deployment.
+
+### DEC-011 — New Houses investigation uses counts AND rates
+Recent original permits: 766 issues, median 71 days, P90 876 days, 131 over-year reviews (17.1%). Revisions: 680 issues and 20 over-year reviews. Originals are 53.0% of issues but 86.8% of the long tail. Q1 2026 has 364 issues and 119 over-year reviews, about 78.8% of recent over-year cases. Evidence: sql/06_dashboard.sql and outputs/new_houses_deep_dive.json. Do not infer that delay accumulated within Q1 or that revision status caused duration; compare case complexity and stage timestamps. Partial edge quarters are labeled in the deep dive.
+
+### ERR-010 — Narration and segment timing
+macOS speech synthesis inside the sandbox produced no usable audio. Authorized retry generated narration. Duration guards then rejected segments that would exceed their allotted windows (30.4 seconds in a 30-second segment and 20.85 seconds in a 20-second segment). Shortened the narration rather than cutting off speech. The final media builder checks total duration and decodes six sample frames; outputs/tour_manifest.json records successful completion once produced. The tour is explicitly computer-narrated and screenshot-based, not the owner's voice or live interaction recording.
+
+
+### Final manager-delivery verification
+The refreshed full pipeline passed 41 original metrics checks and 15 New Houses checks. Final test runs: 16 JavaScript calculation/interface tests and 6 Python/PostgreSQL tests passed. Three genuine desktop Chrome screenshots were visually inspected; native Mechanical filtering and reset matched SQL values. Video completed at 180.02 seconds (2,899,775 bytes), six sample frames decoded and first/middle/last frames were visually checked. Audio volume analysis confirmed non-silent narration (mean -19.8 dB, peak -0.7 dB). The public Site deployment succeeded and the root was anonymously reachable through curl; an automated urllib index.html probe received 403, so no blanket automated asset-readback success is claimed. Browser QA/public access mode and deployment success remain the authoritative hosting evidence.

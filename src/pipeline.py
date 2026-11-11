@@ -30,6 +30,10 @@ def main():
     report()
     from .charts import charts
     charts()
+    from .build_dashboard import build
+    build()
+    from .portfolio_report import write_reports
+    write_reports()
     print(json.dumps(result,indent=2))
 
 

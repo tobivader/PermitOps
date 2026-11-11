@@ -8,3 +8,4 @@ outputs/reporting/fact_reporting.csv
 *.log
 .env
 dist/
+node_modules/

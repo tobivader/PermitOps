@@ -1,0 +1,56 @@
+[
+  {
+    "start": "2025-11",
+    "end": "2026-10",
+    "category": null,
+    "issued": 35876,
+    "median": 28.0,
+    "p90": 141.0,
+    "applications": 37074
+  },
+  {
+    "start": "2025-11",
+    "end": "2026-10",
+    "category": "New Houses",
+    "issued": 1446,
+    "median": 52.0,
+    "p90": 419.5000000000004,
+    "applications": 1445
+  },
+  {
+    "start": "2025-11",
+    "end": "2026-10",
+    "category": "New Building",
+    "issued": 231,
+    "median": 79.0,
+    "p90": 866.0,
+    "applications": 266
+  },
+  {
+    "start": "2026-10",
+    "end": "2026-10",
+    "category": null,
+    "issued": 3112,
+    "median": 27.0,
+    "p90": 125.80000000000014,
+    "applications": 3213
+  },
+  {
+    "start": "2024-12",
+    "end": "2024-12",
+    "category": "AS Alternative Solution",
+    "issued": 0,
+    "median": null,
+    "p90": null,
+    "applications": 35
+  },
+  {
+    "start": "2018-01",
+    "end": "2026-10",
+    "category": null,
+    "issued": 335648,
+    "median": 29.0,
+    "p90": 148.0,
+    "applications": 350230
+  }
+]

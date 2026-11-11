@@ -1,0 +1,25 @@
+{
+  "url": "https://permitops-operations.smalliris16.chatgpt.site",
+  "browser": "Google Chrome, native Computer Use",
+  "genuine_page_captures": {
+    "dashboard/screenshots/01-executive-overview.png": "5dc18de6e0e380ddd2a4967245e8d21f2f68e9f19a8ed4beda911209cca0ecbe",
+    "dashboard/screenshots/02-bottleneck-analysis.png": "5191674edc2ba6b9bd1210821384f3a60919f9d05843709d5f5629ab28f3afb7",
+    "dashboard/screenshots/03-active-workload.png": "6221c667758f38ef853cfb0b92b9bddcb059d3afb575001ede4fd7ac5fc3d278"
+  },
+  "pages_visually_inspected": [
+    "Executive overview",
+    "Bottleneck analysis",
+    "Active workload"
+  ],
+  "native_observations": {
+    "default_issued": 35876,
+    "default_median_review_days": 28,
+    "default_p90_review_days": 141,
+    "active": 194325,
+    "unissued": 13580,
+    "mechanical_filtered_unissued": 2374,
+    "reset_restored_unissued": 13580
+  },
+  "mobile_viewport_tested": false,
+  "power_bi_runtime_tested": false
+}

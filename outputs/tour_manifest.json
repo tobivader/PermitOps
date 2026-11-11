@@ -1,0 +1,56 @@
+{
+  "video": "dashboard/recordings/PermitOps_3_Minute_Manager_Tour.mp4",
+  "seconds": 180.02,
+  "bytes": 2899775,
+  "sha256": "61c4b13623465f3005f658cfc52c8d30f4e4b424b2afdc0e74836348a521e19a",
+  "sections": [
+    {
+      "section": 1,
+      "seconds": 25,
+      "narration_seconds": 22.52,
+      "source_capture": "dashboard/screenshots/01-executive-overview.png",
+      "source_sha256": "5dc18de6e0e380ddd2a4967245e8d21f2f68e9f19a8ed4beda911209cca0ecbe"
+    },
+    {
+      "section": 2,
+      "seconds": 30,
+      "narration_seconds": 26.34,
+      "source_capture": "dashboard/screenshots/01-executive-overview.png",
+      "source_sha256": "5dc18de6e0e380ddd2a4967245e8d21f2f68e9f19a8ed4beda911209cca0ecbe"
+    },
+    {
+      "section": 3,
+      "seconds": 35,
+      "narration_seconds": 28.02,
+      "source_capture": "dashboard/screenshots/02-bottleneck-analysis.png",
+      "source_sha256": "5191674edc2ba6b9bd1210821384f3a60919f9d05843709d5f5629ab28f3afb7"
+    },
+    {
+      "section": 4,
+      "seconds": 40,
+      "narration_seconds": 36.8,
+      "source_capture": "dashboard/screenshots/02-bottleneck-analysis.png",
+      "source_sha256": "5191674edc2ba6b9bd1210821384f3a60919f9d05843709d5f5629ab28f3afb7"
+    },
+    {
+      "section": 5,
+      "seconds": 30,
+      "narration_seconds": 25.92,
+      "source_capture": "dashboard/screenshots/03-active-workload.png",
+      "source_sha256": "6221c667758f38ef853cfb0b92b9bddcb059d3afb575001ede4fd7ac5fc3d278"
+    },
+    {
+      "section": 6,
+      "seconds": 20,
+      "narration_seconds": 15.15,
+      "source_capture": "dashboard/screenshots/03-active-workload.png",
+      "source_sha256": "6221c667758f38ef853cfb0b92b9bddcb059d3afb575001ede4fd7ac5fc3d278"
+    }
+  ],
+  "computer_generated_narration": true,
+  "continuous_screen_recording": false,
+  "six_sample_frames_decoded": true,
+  "audio_mean_db": -19.8,
+  "audio_peak_db": -0.7,
+  "non_silent_audio_verified": true
+}

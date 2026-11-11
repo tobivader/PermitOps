@@ -1,0 +1,14 @@
+{
+  "url": "https://permitops-operations.smalliris16.chatgpt.site",
+  "project_id": "appgprj_6af4ed6d7840819195a793594bb4134d",
+  "version": 1,
+  "source_commit": "c6ec93cabdce0c5a7f880578efb0e4cc6cca426c",
+  "deployment_id": "appgdep_6af4f3655f908191a2f01d29522ecee5",
+  "deployment_status": "succeeded",
+  "access_mode": "public",
+  "root_http_status": 200,
+  "aggregate_data_asset_matches_tested_build": true,
+  "aggregate_asset_sha256": "5143889af05c3a368448ff157e7603996c0aa13fa16c8c4f5760150a15d35bc8",
+  "automated_index_html_probe": "urllib returned 403; canonical root and aggregate asset succeeded through curl",
+  "desktop_browser_verified": true
+}

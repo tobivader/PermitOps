@@ -1,0 +1,2 @@
+# Optional, only for the narrated screenshot-based tour; requires macOS say.
+imageio-ffmpeg==0.8.1

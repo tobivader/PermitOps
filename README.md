@@ -1,78 +1,74 @@
-# PermitOps — Toronto permit operations analytics
+# PermitOps | Toronto permit operations intelligence
 
-Public repository: [tobivader/PermitOps](https://github.com/tobivader/PermitOps).
+**Which permit categories should an operations manager investigate first?**
 
-An analyst portfolio MVP using real City of Toronto permit records to identify categories for operational investigation. Python cleans and audits the data, PostgreSQL computes reusable metrics, and CSV datasets plus DAX measures support a three-page Power BI report.
+[Open the live manager dashboard](https://permitops-operations.smalliris16.chatgpt.site) · [Executive brief](docs/EXECUTIVE_SUMMARY.md) · [New Houses deep dive](docs/NEW_HOUSES_DEEP_DIVE.md)
+
+PermitOps turns Toronto building-permit records into a practical view of demand, elapsed review time and unresolved workload. It is a portfolio case study for a hypothetical municipal operations manager, using real public data and explicit quality controls.
+
+## The business problem
+
+An open permit count alone cannot tell a manager whether cases are awaiting review or already in construction and inspection. Category averages can also hide a small but consequential long-duration tail. The decision is where to investigate, with enough evidence to distinguish severity, scale and changing case mix.
+
+## Data and tools
+
+**649,376 source records** from the City of Toronto: 197,258 active and 452,118 cleared. Snapshot: **November 11, 2026**. Python/pandas cleans and validates the data; PostgreSQL defines reusable analytics; an interactive JavaScript/SVG dashboard makes the results accessible on a Mac or browser.
+
+The default dashboard window is **November 2025–October 2026**: **35,876 eligible issued records**, **28-day median** and **141-day P90**. Historical review metrics include applications from 2018 onward and exclude the incomplete extract month. Active workload uses all application years. Each analytical record is a permit/revision identifier, not a building project.
+
+## Three findings a manager can act on
+
+| Finding | Evidence | Recommended investigation |
+|---|---|---|
+| New Building has a long review-time tail despite a lower median | 231 recent issues; median 79 days; P90 866 days; prior median 155.5 days | Audit long cases for complexity, completeness and response cycles before attributing delay |
+| New Houses warrants an original-permit deep dive | 1,446 recent issues; 52-day median; 419.5-day P90. Original permits are 53.0% of issues but 86.8% of reviews over a year | Sample original cases and investigate the Q1 2026 issuance concentration; compare within-group rates and case histories |
+| Active workload is much larger than the unissued queue | 194,325 active records; 13,580 unissued (7.0%) | Separate review queues from construction/inspection activity, and validate very old open statuses |
+
+These are observed elapsed-time patterns, not proven causes, legal SLAs or measured staff performance. No operational improvement is claimed. Read the [executive brief](docs/EXECUTIVE_SUMMARY.md) for actions and the [deep dive](docs/NEW_HOUSES_DEEP_DIVE.md) for denominators, revision comparisons and quarter coverage.
+
+## The manager dashboard
+
+The completed web application runs on macOS and in modern browsers, without Power BI Desktop. It is an interactive **data snapshot**, not a live City feed.
+
+1. **Executive overview:** application/issue counts, median/P90, complete-month trends and an investigation shortlist.
+2. **Bottleneck analysis:** category duration/volume comparisons, equal prior periods and a fixed-cohort New Houses revision spotlight.
+3. **Active workload:** active versus unissued counts, age buckets and the oldest unresolved categories.
+
+Date/category filters recompute exact percentiles from record-frequency distributions. The workload page keeps its snapshot scope. Tables support category drill-down; export downloads the current view. Definitions and quality caveats are available in the report.
+
+[Open the public dashboard →](https://permitops-operations.smalliris16.chatgpt.site)
+
+![Executive overview captured from the actual live dashboard](dashboard/screenshots/01-executive-overview.png)
+
+Actual Chrome captures: [Bottleneck analysis](dashboard/screenshots/02-bottleneck-analysis.png) · [Active workload](dashboard/screenshots/03-active-workload.png). These are screenshots of the published web report. Separate [SQL analysis figures](docs/figures/category_review_times.png) remain available.
+
+[Watch the three-minute manager tour](dashboard/recordings/PermitOps_3_Minute_Manager_Tour.mp4) · [Narration and interview practice script](docs/WALKTHROUGH_3_MINUTES.md). The video uses actual dashboard captures with computer-generated narration; it is a screenshot-based tour, not the project owner's recorded voice or a continuous screen recording.
+
+## Trust and analytical limits
+
+- 10,730 conflicting-key rows are quarantined; 25 analytically redundant rows are removed. No conflicting row is selected arbitrarily.
+- Invalid chronology is flagged, while large valid durations remain. Terminal/administrative exclusions are explicit.
+- Issuance cohorts omit unresolved cases from final review durations; active unissued age provides the complementary view.
+- Revisions are counted separately. Original-versus-revision and period comparisons are descriptive, without case-complexity adjustment.
+- The public dashboard contains aggregate distributions only: no individual permit IDs, street addresses, descriptions or builder names.
+
+Evidence: [KPI definitions](docs/kpi_definitions.md), [quality report](docs/data_quality_report.md), [validation results](outputs/validation.json), [dashboard SQL references](outputs/dashboard_sql_reference.json), and [New Houses group checks](outputs/new_houses_deep_dive.json).
+
+## Technical implementation
 
 ```mermaid
 flowchart LR
-  A[Toronto CKAN: active + cleared] --> B[CSV snapshots + hashes]
-  B --> C[Python cleaning + quarantine + QA]
-  C --> D[PostgreSQL staging + lifecycle fact]
-  D --> E[Validated SQL metric views]
-  E --> F[Power BI CSV and DAX handoff]
-  E --> G[Findings + analysis charts]
+  A[Toronto public permit CSVs] --> B[Python cleaning and quarantine]
+  B --> C[PostgreSQL staging and lifecycle fact]
+  C --> D[Reusable SQL metrics and distributions]
+  D --> E[Three-page browser dashboard]
+  D --> F[Power BI handoff and business findings]
 ```
 
-[Build status and tested commands](docs/BUILD_STATUS.md) lists what works and what remains unfinished.
+The core pipeline has 41 SQL/pandas checks and six Python/PostgreSQL tests. The dashboard has 16 calculation/interface tests, including independent SQL reference values; the New Houses analysis adds 15 SQL/pandas group checks. See the [technical guide](docs/TECHNICAL_GUIDE.md) for setup and database commands, [dashboard guide](web-dashboard/README.md) for the Mac workflow, and [Learn After Build](docs/LEARN_AFTER_BUILD.md) for architecture and interview preparation.
 
-![Category review-time comparison from validated SQL exports](docs/figures/category_review_times.png)
+Power BI CSVs, M templates and DAX remain available as a separate Windows handoff. No PBIX or Power BI runtime validation is claimed; the published dashboard is a working web application.
 
-Static analysis of two complete issue-year windows; this is not a Power BI screenshot. [Monthly volumes](docs/figures/monthly_volumes.png) and [active workload](docs/figures/active_workload.png) show the other core questions. All charts include cohort definitions and source attribution.
+## Source and licence
 
-The stakeholder is hypothetical. Findings describe recorded elapsed time, not proven causes, staff performance, or achieved improvements. See [findings](docs/findings_recommendations.md), [KPI definitions](docs/kpi_definitions.md) and [quality report](docs/data_quality_report.md).
-
-## Run locally
-
-Requirements: Python 3.13, PostgreSQL 15+ binaries, internet access for first download. The commands below create an isolated local development database; use a separately secured database for deployment.
-
-```bash
-python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
-mkdir -p .local/socket
-initdb -D .local/postgres -A trust --no-locale -E UTF8
-pg_ctl -D .local/postgres -l .local/postgres.log -o '-p 55432 -h 127.0.0.1' start
-.venv/bin/python -m src.pipeline --download --as-of 2026-11-11
-.venv/bin/python -m pytest -q
-```
-
-Replace the example as-of with the extraction date when downloading fresh data. `PERMITOPS_DSN` may specify an existing PostgreSQL database instead of the default `host=127.0.0.1 port=55432 dbname=postgres`. The pipeline replaces tables only within its dedicated `permitops` schema. Do not rerun initdb against an existing cluster. The session's server uses port 55432 and `.local/socket`; reuse it while running.
-
-With retained raw files and manifest, rerun without downloading:
-
-```bash
-.venv/bin/python -m src.pipeline --as-of 2026-11-11
-psql -h 127.0.0.1 -p 55432 -d postgres -f sql/04_analysis.sql
-psql -h 127.0.0.1 -p 55432 -d postgres -f sql/05_validate.sql
-pg_ctl -D .local/postgres stop
-```
-
-On this Mac binaries are at `/opt/homebrew/opt/postgresql@15/bin/`. In the coding sandbox, public network downloads, PostgreSQL initialization/start and database connections required execution approval. A local terminal outside that sandbox may not have those restrictions.
-
-An additional SQL regression test runs against a separate database named `permitops_test` when `PERMITOPS_TEST_DSN` is set. It uses explicit synthetic fixtures with known percentile answers, never the portfolio findings data. The default test command skips that test unless configured:
-
-```bash
-createdb -h 127.0.0.1 -p 55432 permitops_test
-PERMITOPS_TEST_DSN='host=127.0.0.1 port=55432 dbname=permitops_test' .venv/bin/python -m pytest -q
-```
-
-## Outputs and evidence
-
-- `src/`: download, cleaning, database load, validation and findings generation.
-- `sql/`: schema, dimensions, reporting views and analysis examples.
-- `data/raw/manifest.json`: exact downloaded source fingerprints.
-- `data/clean/`: local staging, quarantine, removed duplicates and lifecycle fact CSVs.
-- `outputs/data_quality.json`, `outputs/validation.json`: machine-readable counts and independent SQL checks.
-- `outputs/reporting/`: SQL export datasets, including record-level `fact_reporting.csv` for interactive Power BI percentiles.
-- [Power BI build specification](dashboard/README.md) and [DAX measures](dashboard/measures.dax): provided, not executed in Power BI.
-- [Learn after the build](docs/LEARN_AFTER_BUILD.md) and [decisions/debug journal](PermitOps_Decisions_Learning_and_Debug_Log.md).
-- `docs/figures/`: reproducible PNG/SVG analysis charts and input provenance. Regenerate with `.venv/bin/python -m src.charts` after a validated pipeline run.
-- `dist/PermitOps_PowerBI_Handoff.zip`: local Windows-transfer bundle containing actual reporting CSVs, typed Power Query templates, DAX, model instructions and definitions. Generate it with `.venv/bin/python -m src.package_handoff`; its integrity/hash evidence is in `outputs/handoff_package.json`. The archive stays outside Git because it includes the large record-level reporting dataset.
-
-Power BI Desktop is unavailable in this macOS environment. No PBIX, dashboard screenshots or Power BI validation is claimed. The report import/model/measures are a handoff for a Windows Power BI session. Source, SQL, aggregate results, documentation and charts are published in GitHub; raw/local files and the record-level handoff ZIP remain excluded.
-
-## Scope and cautions
-
-Historical metrics use applications from 2018 onward and issue dates before the extraction month; current workload includes older active applications. Numeric revisions are normalized and counted separately. Conflicting permit/revision keys are quarantined. Terminal cancellations and non-permit administrative categories are explicitly excluded from KPI populations. No large valid duration is silently trimmed. See the KPI contract for precise denominators.
-
-Contains information licensed under the [Open Government Licence – Toronto](https://open.toronto.ca/open-data-licence/), from the City's [active](https://open.toronto.ca/dataset/building-permits-active-permits/) and [cleared](https://open.toronto.ca/dataset/building-permits-cleared-permits/) permit resources. No City endorsement is implied.
+City of Toronto [active permits](https://open.toronto.ca/dataset/building-permits-active-permits/) and [cleared permits](https://open.toronto.ca/dataset/building-permits-cleared-permits/). Contains information licensed under the [Open Government Licence – Toronto](https://open.toronto.ca/open-data-licence/). This independent project is not endorsed by the City.

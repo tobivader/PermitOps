@@ -1,5 +1,7 @@
 # Power BI report build specification
 
+For the completed Mac-friendly report, open https://permitops-operations.smalliris16.chatgpt.site . Actual web-dashboard screenshots and its three-minute screenshot-based tour are in this folder. The instructions below are the separate, optional Power BI handoff.
+
 Status: import datasets and measures provided; no PBIX or rendered Power BI report has been built or tested. This machine runs macOS; [Power BI Desktop requires Windows](https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-get-the-desktop#minimum-requirements). This is a specification, not dashboard screenshots.
 
 ## Import and model

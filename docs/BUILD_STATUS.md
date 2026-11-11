@@ -1,6 +1,6 @@
 # Build status — November 11, 2026
 
-The working Python/PostgreSQL MVP is implemented and verified. This is not a claim that the full four-week publication/dashboard plan is complete. The user explicitly authorized the Project Plan implementation order and a Power BI-ready handoff if this environment could not build the actual report.
+The Python/PostgreSQL project and the Mac-friendly, three-page web dashboard are implemented and verified. The manager dashboard is public at https://permitops-operations.smalliris16.chatgpt.site . The web report is separate from the optional Windows Power BI handoff; no PBIX or Power BI execution is claimed.
 
 | Requested stage | Evidence | Status |
 |---|---|---|
@@ -9,6 +9,10 @@ The working Python/PostgreSQL MVP is implemented and verified. This is not a cla
 | PostgreSQL tables/load/reporting views | sql/01–03; successfully loaded active/cleared staging and fact; repeated full pipeline execution | Complete |
 | Volumes, median/P90, trends, active age, bottlenecks | SQL views; nine reporting CSVs; independent pandas comparisons | Complete |
 | Power BI datasets, measures, three-page specification | dashboard/README.md; DAX and typed M templates; verified local ZIP with actual inputs | Complete handoff; M/DAX and visuals untested |
+| Three-page Mac/browser dashboard | Live public Site; web-dashboard source; three genuine Chrome screenshots; date/category controls and CSV export | Complete |
+| Manager case study and executive brief | Business-first README; docs/EXECUTIVE_SUMMARY.md; technical setup moved into docs/TECHNICAL_GUIDE.md | Complete |
+| New Houses investigation | sql/06_dashboard.sql; docs/NEW_HOUSES_DEEP_DIVE.md; 15 independent SQL/pandas group checks | Complete |
+| Three-minute manager tour | dashboard/recordings/PermitOps_3_Minute_Manager_Tour.mp4; outputs/tour_manifest.json; 180.02 seconds, six decoded sample frames and non-silent audio | Complete, screenshot-based with computer-generated narration |
 | At least three findings and actions | docs/findings_recommendations.md contains four findings, scope, numbers, limitations and success measures | Complete |
 | Pipeline/data-quality testing | Six pytest tests including isolated PostgreSQL regression; 41 SQL/pandas checks; six standalone SQL checks; nine byte-identical exports | Passed |
 | Journal and post-build learning guide | Updated decisions/debug journal; docs/LEARN_AFTER_BUILD.md; dictionary, QA, KPI and business docs | Complete |
@@ -39,6 +43,15 @@ Three static analysis charts were generated from fingerprint-verified SQL export
 - Source, SQL, tests, aggregate outputs, documentation and charts are published at https://github.com/tobivader/PermitOps on main. Initial source commit: 8cae142. GitHub's unauthenticated repository API confirmed public visibility and main as the default branch. Raw/cleaned CSVs, database, virtual environment, record-level reporting CSV and local ZIP remain excluded. See docs/PUBLICATION_CHECKLIST.md.
 - Source-owner confirmation of conflicting identities and administrative-category exclusions is outstanding. Quarantine concentration, especially Conditional/Partial permits, limits comparisons. This does not block reproducing the defined MVP but does limit production interpretation.
 - No geographic joins, business-day calendar, causal attribution, SLA assessment, historical backlog reconstruction or measured operational improvement is claimed.
-- The isolated PostgreSQL server remains running on localhost:55432 for further exploration. Stop it with the README command when finished.
+- The isolated PostgreSQL server remains running on localhost:55432 for further exploration. Stop it with the command in docs/TECHNICAL_GUIDE.md when finished.
 
 Start studying with README.md, then docs/LEARN_AFTER_BUILD.md and docs/findings_recommendations.md. Resume bullets and a five-minute walkthrough are in docs/demo_walkthrough.md.
+
+
+## Manager-facing delivery verification
+
+The refreshed full pipeline passed its original 41 metric checks and 15 additional SQL/pandas deep-dive group checks. Six Python/PostgreSQL tests passed. Sixteen JavaScript calculation/interface tests passed, including exact date/category percentiles, the no-issued/35-application month, active category age references, navigation, CSV creation and date validation/reset.
+
+The public dashboard was opened in Chrome after access was approved. All three live pages were visually inspected and genuinely captured to dashboard/screenshots. The Mechanical workload filter changed unissued count to 2374, matching SQL, and Reset restored 13580. Desktop Chrome navigation and these filter/reset paths were observed; a real mobile viewport and Power BI runtime have not been tested.
+
+The Sites deployment succeeded with public access, version 1, and source commit c6ec93cabdce0c5a7f880578efb0e4cc6cca426c. Hosting identity and UI source are in web-dashboard; the isolated hosting checkout and short-lived credentials are outside GitHub. The SQL reference distributions expose no individual record identifiers.

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Toronto permit operations: review performance, bottleneck investigation and active workload from real City of Toronto data."><title>PermitOps — Operations Intelligence</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<a href="#main" class="skip">Skip to report</a>
+<aside class="sidebar">
+  <a href="#overview" class="brand"><span class="brand-icon">P<span>↗</span></span><span>PermitOps<small>OPERATIONS INTELLIGENCE</small></span></a>
+  <div class="workspace-label">TORONTO BUILDING PERMITS</div>
+  <nav aria-label="Report pages">
+    <button data-page="overview" class="nav-item active"><span>▦</span>Executive overview<span class="nav-number">01</span></button>
+    <button data-page="bottlenecks" class="nav-item"><span>◷</span>Bottleneck analysis<span class="nav-number">02</span></button>
+    <button data-page="workload" class="nav-item"><span>▤</span>Active workload<span class="nav-number">03</span></button>
+  </nav>
+  <div class="sidebar-note"><span class="live-dot"></span> VERIFIED PUBLIC DATA<p>City of Toronto<br>Snapshot · 11 Nov 2026</p></div>
+  <div class="sidebar-bottom"><span class="avatar">TO</span><div>Municipal operations<small>Analyst portfolio case study</small></div></div>
+</aside>
+<div class="workspace">
+  <header class="topbar"><div>Workspace <span>/</span> <strong>Permit operations</strong></div><div class="top-actions"><span class="verified">✓ SQL-validated metrics</span><a href="https://github.com/tobivader/PermitOps" target="_blank" rel="noreferrer">View project ↗</a></div></header>
+  <main id="main">
+    <div class="heading-row"><div><p class="eyebrow">OPERATIONS REPORT <span id="page-number">/ 01</span></p><h1 id="page-title">Executive overview</h1><p id="page-description" class="description">A clear view of permit demand, review time and where to focus next.</p></div><button id="export" class="outline-button">↓ Export this view</button></div>
+    <section class="filterbar" aria-label="Report filters"><div class="filter-icon">☷</div><label id="period-control">Reporting period<select id="period"><option value="12">Last 12 complete months</option><option value="24">Last 24 complete months</option><option value="all">All complete study months</option><option value="custom">Custom range</option></select></label><label class="custom-range hidden">From<input type="month" id="start"></label><label class="custom-range hidden">Through<input type="month" id="end"></label><label>Permit category<select id="category"><option value="all">All permit categories</option></select></label><button id="reset" class="reset-button">Reset filters</button><span id="date-label" class="date-label"></span></section>
+    <div id="notice" role="status" aria-live="polite"></div>
+    <section id="report" aria-live="polite" aria-label="Dashboard results"><div class="loading">Loading validated permit data…</div></section>
+    <footer><span>Source: City of Toronto Open Data · Calendar days · Permit/revision grain</span><button id="methodology">Metric definitions & data quality ↗</button></footer>
+  </main>
+</div>
+<dialog id="definitions"><div class="dialog-heading"><h2>Know what you’re measuring</h2><button id="close-dialog" aria-label="Close definitions">×</button></div><p><strong>Review days</strong> are calendar days between application and issuance for valid issued records. Median is the middle case; P90 shows the long-duration tail. These are elapsed days, not staff effort or legal SLAs.</p><p><strong>Historical scope:</strong> applications from 2018 onward; the extraction month is excluded. Percentiles recalculate from frequency distributions under your filters, rather than averaging monthly medians. Equal-length preceding periods support comparisons; 100 issues in each period is a stability rule, not statistical significance.</p><p><strong>Active workload</strong> is a snapshot across all application years. Active issued permits are separate from unissued permits. Unissued age is time elapsed so far, not final review duration.</p><p><strong>Quality:</strong> 10,730 conflicting-key rows are quarantined, and 25 analytically redundant rows are removed. Terminal and administrative categories are excluded from affected KPIs. Outliers remain; timestamps cannot explain causes.</p><p>Contains information licensed under the <a href="https://open.toronto.ca/open-data-licence/" target="_blank" rel="noreferrer">Open Government Licence – Toronto</a>. This independent portfolio project is not endorsed by the City.</p></dialog>
+<script src="data.js"></script><script src="engine.js"></script><script src="app.js"></script>
+</body></html>
