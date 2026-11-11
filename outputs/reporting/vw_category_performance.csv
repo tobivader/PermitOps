@@ -1,0 +1,15 @@
+permit_type,issued,median_review_days,p90_review_days,revision_records,over_365_days
+Building Additions/Alterations,42544,32.0,109.0,6914,706
+Conditional Permit,9,14.0,33.000000000000014,3,0
+Demolition Folder (DM),8974,59.0,245.0,33,469
+Designated Structures,7209,19.0,116.0,114,127
+Drain and Site Service,42797,7.0,140.0,484,1691
+Fire/Security Upgrade,6952,27.0,68.0,454,136
+Mechanical(MS),65424,32.0,162.0,9436,3003
+New Building,1853,112.0,896.8000000000001,939,518
+New Houses,15131,55.0,336.0,5281,1408
+Partial Permit,388,83.0,479.5000000000001,57,59
+Plumbing(PS),73867,31.0,152.0,5439,3013
+Portable Classrooms,177,38.0,100.40000000000002,10,2
+Small Residential Projects,68183,21.0,119.0,12879,1383
+Temporary Structures,2140,11.0,36.0,63,7

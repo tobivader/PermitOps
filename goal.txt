@@ -1,0 +1,19 @@
+Build the PermitOps project using `PermitOps_Codex_Overnight_Goal.md` as your primary instructions.
+
+Also read:
+- `PermitOps_Project_Plan.md`
+- `PermitOps_Decisions_Learning_and_Debug_Log.md`
+
+**My goal is to complete as much of the working project as possible in this coding session.**
+
+Prioritize real data, a functioning Python pipeline, PostgreSQL analytics, validated SQL metrics, and Power BI-ready reporting outputs.
+
+Do not stop to teach me every concept. Make reasonable implementation decisions and document them so I can study the project afterward.
+
+For every important error, record what went wrong, the root cause, the fix, and how you verified it.
+
+Create `docs/LEARN_AFTER_BUILD.md` explaining the architecture, important SQL queries, Python transformations, design decisions, and debugging lessons in simple English.
+
+Do not invent results, use synthetic data as real findings, or claim untested features work.
+
+Work through the implementation in the order defined in the goal file. At the end, show what is complete, what was tested, and what remains unfinished.

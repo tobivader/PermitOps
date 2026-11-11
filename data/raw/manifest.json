@@ -1,0 +1,16 @@
+{
+  "active": {
+    "url": "https://ckan0.cf.opendata.inter.prod-toronto.ca/datastore/dump/6d0229af-bc54-46de-9c2b-26759b01dd05",
+    "resource_id": "6d0229af-bc54-46de-9c2b-26759b01dd05",
+    "retrieved_at": "2026-11-11T22:02:43.877292+00:00",
+    "sha256": "a4162a1393ef13f2318421b09150214381734e65acb5fe1777c0e8c094bfed52",
+    "bytes": 66694859
+  },
+  "cleared": {
+    "url": "https://ckan0.cf.opendata.inter.prod-toronto.ca/datastore/dump/a96c0ba4-3026-402b-b09d-5b1268b8f810",
+    "resource_id": "a96c0ba4-3026-402b-b09d-5b1268b8f810",
+    "retrieved_at": "2026-11-11T22:02:52.432288+00:00",
+    "sha256": "1a2483c6381b12534670de3201a6c8672406201de0f3a9c7fe9d3eecd755704b",
+    "bytes": 152418650
+  }
+}

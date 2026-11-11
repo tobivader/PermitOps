@@ -1,0 +1,5 @@
+# Reporting manifests fingerprint exact bytes. Preserve generated CSV line endings.
+*.csv -text whitespace=-blank-at-eol,cr-at-eol
+# Markdown uses intentional double-space line breaks in the user's planning files.
+*.md whitespace=-blank-at-eol
+outputs/sql_validation.txt whitespace=-blank-at-eol

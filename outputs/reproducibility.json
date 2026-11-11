@@ -1,0 +1,15 @@
+{
+  "reporting_csv_count": 9,
+  "byte_identical": true,
+  "files": {
+    "dim_date.csv": true,
+    "dim_permit_type.csv": true,
+    "fact_reporting.csv": true,
+    "original_revision_sensitivity.csv": true,
+    "vw_active_summary.csv": true,
+    "vw_bottlenecks.csv": true,
+    "vw_category_performance.csv": true,
+    "vw_monthly_performance.csv": true,
+    "vw_monthly_trend.csv": true
+  }
+}

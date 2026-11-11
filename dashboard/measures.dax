@@ -1,0 +1,43 @@
+// Import as individual measures in Power BI. Not executed in this environment.
+// Fact name: fact_reporting. Date table: dim_date.
+// The snapshot cutoff must survive an empty issue-month/category selection.
+As Of Date = CALCULATE(MAX(fact_reporting[as_of_date]), REMOVEFILTERS())
+
+Issued Permits =
+VAR Cutoff = DATE(YEAR([As Of Date]), MONTH([As Of Date]), 1)
+RETURN CALCULATE(COUNTROWS(fact_reporting),
+    fact_reporting[review_eligible] = TRUE(),
+    fact_reporting[application_date] >= DATE(2018,1,1),
+    fact_reporting[issued_date] < Cutoff)
+
+Median Review Days =
+VAR Cutoff = DATE(YEAR([As Of Date]), MONTH([As Of Date]), 1)
+RETURN CALCULATE(MEDIAN(fact_reporting[review_days]),
+    fact_reporting[review_eligible] = TRUE(),
+    fact_reporting[application_date] >= DATE(2018,1,1),
+    fact_reporting[issued_date] < Cutoff)
+
+P90 Review Days =
+VAR Cutoff = DATE(YEAR([As Of Date]), MONTH([As Of Date]), 1)
+RETURN CALCULATE(PERCENTILE.INC(fact_reporting[review_days], 0.9),
+    fact_reporting[review_eligible] = TRUE(),
+    fact_reporting[application_date] >= DATE(2018,1,1),
+    fact_reporting[issued_date] < Cutoff)
+
+Applications =
+VAR Cutoff = DATE(YEAR([As Of Date]), MONTH([As Of Date]), 1)
+RETURN CALCULATE(COUNTROWS(fact_reporting),
+    CROSSFILTER(dim_date[calendar_date], fact_reporting[issued_date], NONE),
+    USERELATIONSHIP(dim_date[calendar_date], fact_reporting[application_date]),
+    fact_reporting[application_eligible] = TRUE(),
+    fact_reporting[application_date] >= DATE(2018,1,1),
+    fact_reporting[application_date] < Cutoff)
+
+Active Permits = CALCULATE(COUNTROWS(fact_reporting), REMOVEFILTERS(dim_date),
+    fact_reporting[active_eligible] = TRUE())
+
+Active Unissued = CALCULATE(COUNTROWS(fact_reporting), REMOVEFILTERS(dim_date),
+    fact_reporting[active_unissued_eligible] = TRUE())
+
+Median Unissued Age = CALCULATE(MEDIAN(fact_reporting[active_age_days]), REMOVEFILTERS(dim_date),
+    fact_reporting[active_unissued_eligible] = TRUE())

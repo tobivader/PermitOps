@@ -1,0 +1,12 @@
+permit_type,recent_issued,prior_issued,recent_median_days,prior_median_days,recent_p90_days,median_change_days,severity_rank
+Building Additions/Alterations,4676,4742,33.0,32.0,99.0,1.0,4
+Demolition Folder (DM),889,948,69.0,70.0,408.2000000000001,-1.0,2
+Designated Structures,936,843,7.0,11.0,50.50000000000002,-4.0,11
+Drain and Site Service,4447,4683,10.0,12.0,146.0,-2.0,9
+Fire/Security Upgrade,846,845,24.0,24.0,67.0,0.0,7
+Mechanical(MS),6979,7321,31.0,34.0,155.0,-3.0,5
+New Building,231,262,79.0,155.5,866.0,-76.5,1
+New Houses,1446,1392,52.0,54.0,419.5000000000004,-2.0,3
+Plumbing(PS),7479,8563,29.0,29.0,142.0,0.0,6
+Small Residential Projects,7551,7578,16.0,15.0,110.0,1.0,8
+Temporary Structures,321,266,9.0,13.0,35.0,-4.0,10

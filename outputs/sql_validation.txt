@@ -1,0 +1,32 @@
+BEGIN
+      check_name      | passed 
+----------------------+--------
+ input_row_accounting | t
+(1 row)
+
+ check_name | passed 
+------------+--------
+ fact_count | t
+(1 row)
+
+         check_name         | passed 
+----------------------------+--------
+ no_invalid_review_duration | t
+(1 row)
+
+          check_name           | passed 
+-------------------------------+--------
+ monthly_review_reconciliation | t
+(1 row)
+
+           check_name           | passed 
+--------------------------------+--------
+ active_workload_reconciliation | t
+(1 row)
+
+       check_name        | passed 
+-------------------------+--------
+ unissued_age_arithmetic | t
+(1 row)
+
+COMMIT

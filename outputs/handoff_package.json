@@ -1,0 +1,10 @@
+{
+  "as_of": "2026-11-11",
+  "archive": "dist/PermitOps_PowerBI_Handoff.zip",
+  "bytes": 8095402,
+  "sha256": "baeb701658682158b7c2d6f77d89ef50821e478cda322894c57b73592fd78dfc",
+  "source_files": 18,
+  "zip_integrity_passed": true,
+  "all_included_files_hash_verified": true,
+  "power_bi_runtime_tested": false
+}

@@ -1,0 +1,10 @@
+.venv/
+.local/
+__pycache__/
+.pytest_cache/
+data/raw/*.csv
+data/clean/
+outputs/reporting/fact_reporting.csv
+*.log
+.env
+dist/

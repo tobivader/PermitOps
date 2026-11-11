@@ -1,0 +1,75 @@
+permit_type,age_bucket,active_permits,active_unissued,active_with_issue_date,median_unissued_age_days
+AS Alternative Solution,0–30,21,21,0,15.0
+AS Alternative Solution,181–365,32,32,0,337.0
+AS Alternative Solution,31–90,25,25,0,71.0
+AS Alternative Solution,366+,190,190,0,1476.5
+AS Alternative Solution,91–180,12,12,0,122.0
+Building Additions/Alterations,0–30,421,352,69,14.5
+Building Additions/Alterations,181–365,1663,123,1540,259.0
+Building Additions/Alterations,31–90,794,257,537,55.0
+Building Additions/Alterations,366+,27485,628,26857,1793.0
+Building Additions/Alterations,91–180,1139,158,981,125.0
+Conditional Permit,0–30,1,1,0,20.0
+Conditional Permit,366+,16,0,16,
+Demolition Folder (DM),0–30,70,65,5,16.0
+Demolition Folder (DM),181–365,298,52,246,210.0
+Demolition Folder (DM),31–90,137,84,53,55.5
+Demolition Folder (DM),366+,1392,226,1166,1198.0
+Demolition Folder (DM),91–180,182,53,129,138.0
+Designated Structures,0–30,118,58,60,8.0
+Designated Structures,181–365,212,12,200,260.5
+Designated Structures,31–90,153,20,133,46.5
+Designated Structures,366+,748,38,710,1507.5
+Designated Structures,91–180,179,12,167,146.5
+Drain and Site Service,0–30,340,167,173,14.0
+Drain and Site Service,181–365,1131,134,997,273.0
+Drain and Site Service,31–90,539,195,344,58.0
+Drain and Site Service,366+,11801,630,11171,1140.0
+Drain and Site Service,91–180,741,122,619,125.0
+Fire/Security Upgrade,0–30,95,64,31,12.0
+Fire/Security Upgrade,181–365,310,60,250,240.0
+Fire/Security Upgrade,31–90,165,49,116,57.0
+Fire/Security Upgrade,366+,5214,1326,3888,4151.0
+Fire/Security Upgrade,91–180,199,46,153,126.5
+Mechanical(MS),0–30,564,440,124,14.5
+Mechanical(MS),181–365,2439,173,2266,273.0
+Mechanical(MS),31–90,1338,588,750,71.0
+Mechanical(MS),366+,29522,952,28570,1301.5
+Mechanical(MS),91–180,1653,221,1432,126.0
+Multiple Use Permit,366+,132,9,123,9511.0
+New Building,0–30,23,21,2,16.0
+New Building,181–365,119,41,78,287.0
+New Building,31–90,52,32,20,69.5
+New Building,366+,2148,306,1842,935.5
+New Building,91–180,59,29,30,125.0
+New Houses,0–30,115,103,12,19.0
+New Houses,181–365,626,50,576,241.0
+New Houses,31–90,274,90,184,51.0
+New Houses,366+,9144,329,8815,1518.0
+New Houses,91–180,354,100,254,117.0
+Non-Residential Building Permit,366+,482,47,435,9681.0
+Partial Permit,0–30,15,15,0,22.0
+Partial Permit,181–365,27,15,12,273.0
+Partial Permit,31–90,25,22,3,64.0
+Partial Permit,366+,234,149,85,1154.0
+Partial Permit,91–180,37,28,9,141.0
+Plumbing(PS),0–30,596,405,191,15.0
+Plumbing(PS),181–365,2594,202,2392,266.0
+Plumbing(PS),31–90,1099,351,748,55.0
+Plumbing(PS),366+,36438,1012,35426,1253.5
+Plumbing(PS),91–180,1693,216,1477,125.5
+Portable Classrooms,0–30,1,1,0,16.0
+Portable Classrooms,181–365,2,0,2,
+Portable Classrooms,366+,209,10,199,2845.5
+Portable Classrooms,91–180,3,0,3,
+Residential Building Permit,366+,2076,101,1975,9695.0
+Small Residential Projects,0–30,681,428,253,13.0
+Small Residential Projects,181–365,2593,256,2337,255.5
+Small Residential Projects,31–90,1207,304,903,52.5
+Small Residential Projects,366+,37769,1031,36738,1682.0
+Small Residential Projects,91–180,1806,242,1564,127.0
+Temporary Structures,0–30,17,7,10,9.0
+Temporary Structures,181–365,84,2,82,251.5
+Temporary Structures,31–90,59,5,54,62.0
+Temporary Structures,366+,126,26,100,865.0
+Temporary Structures,91–180,67,9,58,103.0

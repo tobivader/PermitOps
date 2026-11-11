@@ -1,0 +1,24 @@
+{
+  "as_of": "2026-11-11",
+  "input_fingerprints": {
+    "vw_monthly_performance.csv": {
+      "sha256": "7c95628e625881fee3af335c9dc030bf045a698d4440841d740f72824cd54253",
+      "bytes": 131414
+    },
+    "vw_bottlenecks.csv": {
+      "sha256": "a93530952073910ef6fbd581ac0ad528a9062163de718f596da0c67674b1a88f",
+      "bytes": 742
+    },
+    "vw_active_summary.csv": {
+      "sha256": "d04d83097fa19bc8e3b8c44ea6842012a6e1f3e13efcb98a25d38671b050142d",
+      "bytes": 3475
+    }
+  },
+  "active_total": 194325,
+  "active_unissued": 13580,
+  "chart_names": [
+    "monthly_volumes",
+    "category_review_times",
+    "active_workload"
+  ]
+}

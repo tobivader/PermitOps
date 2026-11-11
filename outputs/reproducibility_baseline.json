@@ -1,0 +1,38 @@
+{
+  "dim_date.csv": {
+    "sha256": "78191242ae4f0dd32df57e7e49b31cff33a2abadd3f6c524549387d74bdc1d79",
+    "bytes": 97926
+  },
+  "dim_permit_type.csv": {
+    "sha256": "a40becc67126023cd5d998590b39acdce74508148fdca4136162ea29bf4903cc",
+    "bytes": 612
+  },
+  "fact_reporting.csv": {
+    "sha256": "336c97d049da0c16d0d98db61ae4c6687725503256b2a26c3c78d96f0db10323",
+    "bytes": 80641715
+  },
+  "original_revision_sensitivity.csv": {
+    "sha256": "79c7b0a783d1508b64094f0a998ec00256c3f4b6c972a5354e43fa35b596a77c",
+    "bytes": 590
+  },
+  "vw_active_summary.csv": {
+    "sha256": "d04d83097fa19bc8e3b8c44ea6842012a6e1f3e13efcb98a25d38671b050142d",
+    "bytes": 3475
+  },
+  "vw_bottlenecks.csv": {
+    "sha256": "a93530952073910ef6fbd581ac0ad528a9062163de718f596da0c67674b1a88f",
+    "bytes": 742
+  },
+  "vw_category_performance.csv": {
+    "sha256": "a81d91ee9a6ce2710e4866ae63c311702abcb76129c029be7b589cb6528518cf",
+    "bytes": 758
+  },
+  "vw_monthly_performance.csv": {
+    "sha256": "7c95628e625881fee3af335c9dc030bf045a698d4440841d740f72824cd54253",
+    "bytes": 131414
+  },
+  "vw_monthly_trend.csv": {
+    "sha256": "e830a802d0f9e5a3d50915d6ab5098ac28ee78a104f559fd3de4467a2adc13d7",
+    "bytes": 146996
+  }
+}
