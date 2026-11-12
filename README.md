@@ -38,11 +38,13 @@ Date/category filters recompute exact percentiles from record-frequency distribu
 
 [Open the public dashboard →](https://permitops-operations.smalliris16.chatgpt.site)
 
-![Executive overview captured from the actual live dashboard](dashboard/screenshots/01-executive-overview.png)
+**Current visual design:** version 2 uses an editorial black masthead, custom PermitOps monogram, architectural line art, cobalt highlights and a warm paper canvas. Open the live dashboard above to see the current style.
 
-Actual Chrome captures: [Bottleneck analysis](dashboard/screenshots/02-bottleneck-analysis.png) · [Active workload](dashboard/screenshots/03-active-workload.png). These are screenshots of the published web report. Separate [SQL analysis figures](docs/figures/category_review_times.png) remain available.
+![Version 1 executive dashboard capture](dashboard/screenshots/01-executive-overview.png)
 
-[Watch the three-minute manager tour](dashboard/recordings/PermitOps_3_Minute_Manager_Tour.mp4) · [Narration and interview practice script](docs/WALKTHROUGH_3_MINUTES.md). The video uses actual dashboard captures with computer-generated narration; it is a screenshot-based tour, not the project owner's recorded voice or a continuous screen recording.
+Earlier version 1 Chrome captures: [Bottleneck analysis](dashboard/screenshots/02-bottleneck-analysis.png) · [Active workload](dashboard/screenshots/03-active-workload.png). These genuine captures show the earlier layout; version 2 is live at the dashboard link. Separate [SQL analysis figures](docs/figures/category_review_times.png) remain available.
+
+[Watch the three-minute manager tour](dashboard/recordings/PermitOps_3_Minute_Manager_Tour.mp4) · [Narration and interview practice script](docs/WALKTHROUGH_3_MINUTES.md). The video uses version 1 dashboard captures with computer-generated narration; it is a screenshot-based tour, not the project owner's recorded voice or a continuous screen recording.
 
 ## Trust and analytical limits
 

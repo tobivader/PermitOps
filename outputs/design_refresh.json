@@ -1,0 +1,16 @@
+{
+  "url": "https://permitops-operations.smalliris16.chatgpt.site",
+  "project_id": "appgprj_6af4ed6d7840819195a793594bb4134d",
+  "version": 2,
+  "source_commit": "072dfe75400623a0f6696d78dfdfdab7477b3ea8",
+  "deployment_id": "appgdep_6af5028fb964819193b8a6020a73a00e",
+  "deployment_status": "succeeded",
+  "access_mode": "public",
+  "dashboard_tests_passed": 16,
+  "data_asset_sha256": "5143889af05c3a368448ff157e7603996c0aa13fa16c8c4f5760150a15d35bc8",
+  "engine_sha256": "ae23e562356ef0093af752e4073ca471175e2afc3216688fd40e520126706acc",
+  "desktop_preview_visually_inspected": true,
+  "fresh_screenshot_capture_completed": false,
+  "capture_limit": "Native Chrome control timed out; earlier captures are labeled version 1",
+  "design_reference": "https://www.konrad.com/"
+}

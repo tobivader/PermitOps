@@ -55,3 +55,8 @@ The refreshed full pipeline passed its original 41 metric checks and 15 addition
 The public dashboard was opened in Chrome after access was approved. All three live pages were visually inspected and genuinely captured to dashboard/screenshots. The Mechanical workload filter changed unissued count to 2374, matching SQL, and Reset restored 13580. Desktop Chrome navigation and these filter/reset paths were observed; a real mobile viewport and Power BI runtime have not been tested.
 
 The Sites deployment succeeded with public access, version 1, and source commit c6ec93cabdce0c5a7f880578efb0e4cc6cca426c. Hosting identity and UI source are in web-dashboard; the isolated hosting checkout and short-lived credentials are outside GitHub. The SQL reference distributions expose no individual record identifiers.
+
+
+## Visual refresh — version 2
+
+Published the Konrad-influenced editorial restyle to the existing public dashboard. The chart data and calculation engine are unchanged. Sixteen calculation/interface tests passed against the redesigned HTML; the local desktop preview was visually inspected. Browser control subsequently timed out during clean screenshot capture, so README imagery and the video are labeled as version 1. The live Site is the current visual reference.

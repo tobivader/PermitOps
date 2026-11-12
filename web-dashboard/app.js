@@ -2,7 +2,7 @@
   'use strict';
   const D=window.PERMITOPS_DATA,E=window.PermitOpsEngine,$=s=>document.querySelector(s);
   if(!D||!E){$('#report').innerHTML='<div class="error-state">Dashboard data could not load. Regenerate with python -m src.build_dashboard, then reload.</div>';return;}
-  const C={blue:'#3876e7',teal:'#1b9b91',amber:'#d39a45',pale:'#b4c9ee',grid:'#edf1f7',text:'#7b8fa6'};
+  const C={blue:'#2165ff',teal:'#365e4c',amber:'#c58b37',pale:'#bad1ff',grid:'#e8eee8',text:'#7d9386'};
   const nf=new Intl.NumberFormat('en-CA',{maximumFractionDigits:1});
   const fmt=v=>v===null||v===undefined?'—':nf.format(v);
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

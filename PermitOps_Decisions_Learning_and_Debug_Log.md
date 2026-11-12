@@ -498,3 +498,10 @@ macOS speech synthesis inside the sandbox produced no usable audio. Authorized r
 
 ### Final manager-delivery verification
 The refreshed full pipeline passed 41 original metrics checks and 15 New Houses checks. Final test runs: 16 JavaScript calculation/interface tests and 6 Python/PostgreSQL tests passed. Three genuine desktop Chrome screenshots were visually inspected; native Mechanical filtering and reset matched SQL values. Video completed at 180.02 seconds (2,899,775 bytes), six sample frames decoded and first/middle/last frames were visually checked. Audio volume analysis confirmed non-silent narration (mean -19.8 dB, peak -0.7 dB). The public Site deployment succeeded and the root was anonymously reachable through curl; an automated urllib index.html probe received 403, so no blanket automated asset-readback success is claimed. Browser QA/public access mode and deployment success remain the authoritative hosting evidence.
+
+
+## Visual design refresh — 2026-11-11
+
+The user requested a unique style inspired by Konrad. Inspected Konrad's current homepage and public styles: black/white surfaces, electric blue, large typography and generous spacing. Created an original PermitOps field-report identity with a custom P monogram, architectural SVG, dark masthead, numbered horizontal navigation, cobalt metric feature and warm analytical canvas. No third-party logo, font file or artwork was copied. Decorative geometry does not represent a map or data.
+
+Verification: all 16 calculation/interface tests passed after HTML/CSS and chart-palette changes. Data.js and engine.js remained unchanged. Local desktop preview was visually inspected; later native Chrome calls timed out and reset the tool, so no fresh clean screenshots were claimed. Earlier screenshots/video are labeled version 1. Published version 2 successfully, preserving public access, from managed source commit 072dfe75400623a0f6696d78dfdfdab7477b3ea8.

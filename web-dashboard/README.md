@@ -44,3 +44,10 @@ Publication is a separate, deliberate step; a local refresh does not silently ch
 Sixteen tests passed. Actual desktop Chrome inspection and screenshots are recorded in the build status: all three pages were inspected, the Mechanical workload filter matched SQL (2,374 unissued), and Reset restored 13,580. Responsive CSS is implemented, but mobile-device behavior has not been tested in a real narrow viewport.
 
 The dataset builder also independently verifies 15 SQL revision/quarter groups against pandas. Source hashes, data sizes and anonymity are documented in `outputs/dashboard_data_manifest.json`. The frequency dataset contains no permit IDs, addresses, builder names or descriptions.
+
+
+## Visual direction — version 2
+
+The editorial field-report design takes inspiration from Konrad's current black/white palette, electric-blue accents and oversized typography (https://www.konrad.com/). PermitOps has its own cut-corner P monogram, architectural SVG illustration, warm paper canvas, numbered horizontal navigation, joined metric strip and restrained green analytical surfaces. The illustration is decorative, not geographic data. Motion respects prefers-reduced-motion. No Konrad logo, proprietary font or site assets were reused.
+
+Sixteen existing dashboard tests passed after the structure/palette update. The desktop local preview was visually inspected. Subsequent native Chrome control timed out, so the existing screenshots and tour are explicitly retained as version 1 captures; no new screenshots were fabricated. Real mobile visual QA remains unperformed.
